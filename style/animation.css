@@ -1,0 +1,13 @@
+/* appearance for scroll */
+._anim-show {
+    opacity: 1;
+    transition: all 0.9s ease 0s;
+    transform: translateX(-15px);
+}
+
+._anim-show._active,
+._active ._anim-show {
+    opacity: 1;
+    transform: scale(1);
+}
+
