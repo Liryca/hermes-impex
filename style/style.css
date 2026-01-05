@@ -228,31 +228,7 @@ body {
     color: #F73425;
 }
 
-.email__link:hover {
-    padding-right: 0;
-    padding-bottom: 0.5px;
-    border-bottom: 0 #F73425;
-    box-shadow: 0 2px 0 0 #F73425;
-    text-decoration: none;
-}
 
-.email__link {
-    font-size: 16px;
-    line-height: 16px;
-    text-align: right;
-    text-transform: lowercase;
-    color: #F73425
-}
-
-.email__img {
-    margin-right: 14px;
-    width: 17px;
-    height: 17px;
-}
-
-.mobile-email__link {
-    display: none;
-}
 
 .mobile__menu {
     display: flex;
@@ -266,7 +242,9 @@ body {
 #services,
 #cooperation-scheme,
 #connection,
-#contact {
+#contact,
+#products,
+#partners {
     width: 100%;
     height: auto;
     display: flex;
@@ -281,11 +259,11 @@ section h2 {
     color: #FFFFFF;
     font-family: 'Montserrat';
     font-weight: 600;
-    font-size: 38px;
-    line-height: 38px;
+    font-size: 32px;
+    line-height: 32px;
     margin-bottom: 50px;
     color: #111C31;
-    padding-top: 100px;
+
 
 }
 
@@ -303,14 +281,15 @@ section h2 {
     padding: 0 15px 0 15px;
     display: flex;
     gap: 20;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
+    padding-top: 150px;
 }
 
 .about__description {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 22px;
     line-height: 120%;
     color: #2B2B2B;
     margin-bottom: 48px;
@@ -320,7 +299,7 @@ section h2 {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    font-size: 21px;
+    font-size: 18px;
     line-height: 134.9%;
     color: #2B2B2B;
 }
@@ -356,14 +335,6 @@ section h2 {
 }
 
 
-
-
-
-
-
-
-
-
 /* servese......................................................................................................................... */
 
 .bg-services_section {
@@ -379,7 +350,8 @@ section h2 {
     margin: 0 auto;
     padding: 0 15px 0 15px;
     flex-direction: column;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
+    padding-top: 150px;
 }
 
 .services__title {
@@ -408,14 +380,13 @@ section h2 {
 
 .serveces__block-container {
     display: flex;
-    gap: 20px;
+    gap: 50px;
     flex-direction: column;
 }
 
 .services_row {
     display: flex;
     gap: 10px;
-
 }
 
 
@@ -434,12 +405,11 @@ section h2 {
 .serveces__block-title {
     font-family: 'Ubuntu';
     font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
+    font-weight: 600;
+    font-size: 22px;
     line-height: 25px;
     color: #ffffff;
     margin: 15px 0 15px 0;
-
 }
 
 .serveces__block-discribe {
@@ -447,113 +417,217 @@ section h2 {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    font-size: 21px;
+    font-size: 18px;
     line-height: 134.9%;
 }
 
 
 
+/* products =========================================================================/*    */
 
-
-
-
-
-
-
-
-/* Стили для простого списка */
-.services__simple-list {
-    margin: 15px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.services__list-category {
-    padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 6px;
-    border-left: 2px solid rgba(77, 166, 255, 0.5);
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #fff;
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-
-}
-
-.services__list-category strong {
-    color: #ffffff;
-    font-weight: 400;
-    display: block;
-    margin-bottom: 3px;
-    font-size: 22px;
-    font-family: 'Ubuntu';
-
-}
-
-/* Основные цвета */
 :root {
     --dark-bg: #000C23;
     --red-accent: #F73425;
     --orange-accent: #FF6B35;
-    --text-light: #E0E7FF;
-    --text-medium: #B0C7FF;
-    --text-dark: #8A94B8;
+    --light-bg: #f9f9f9;
+    --card-bg: #ffffff;
+    --border-light: #eaeaea;
+    --text-primary: #333333;
+    --text-secondary: #666666;
 }
 
-/* Секция услуг */
-.bg-services_section {
-    background: var(--dark-bg);
+.products {
+    background-color: var(--light-bg);
 }
 
-/* Заголовок секции */
-.services__title {
-    color: #FFFFFF;
-    padding-bottom: 15px;
-    display: inline-block;
+.products__content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px 0 15px;
+    /* display: flex; */
+    gap: 20;
+    padding-bottom: 150px;
+    padding-top: 150px;
 }
 
 
+.hybrid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+}
 
-
-
-.services__list-category {
-    padding: 18px 20px;
-    margin-bottom: 15px;
-    background: linear-gradient(90deg,
-            rgba(247, 52, 37, 0.1) 0%,
-            transparent 100%);
-    border-radius: 8px;
-    position: relative;
+.hybrid-card {
+    background: var(--card-bg);
+    border-radius: 12px;
     overflow: hidden;
-}
-
-.services__list-category::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: linear-gradient(180deg, var(--red-accent), var(--orange-accent));
+    border: 1px solid var(--border-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 
-.services__list-category {
-    color: var(--text-light);
-    font-size: 17px;
-    line-height: 1.6;
+.card-header {
+    padding: 25px;
+    background: linear-gradient(135deg,
+            rgba(var(--accent-color, 247, 52, 37), 0.08) 0%,
+            rgba(var(--accent-color, 255, 107, 53), 0.04) 100%);
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
 }
+
+
+.card-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--accent-color, 247, 52, 37), 0.1);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.card-title h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--dark-bg);
+    font-weight: 600;
+    line-height: 1.4;
+    font-family: 'Ubuntu';
+}
+
+.card-details {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-block {
+    flex-grow: 1;
+}
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    background: rgba(0, 12, 35, 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 12, 35, 0.08);
+    transition: all 0.2s ease;
+}
+
+
+.item-text {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 134.9%;
+    color: #2B2B2B;
+}
+
+.detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-tag {
+    padding: 8px 16px;
+    background: rgba(var(--accent-color, 247, 52, 37), 0.08);
+    color: var(--text-primary);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(var(--accent-color, 247, 52, 37), 0.15);
+    transition: all 0.2s ease;
+}
+
+.detail-tag:hover {
+    background: rgba(var(--accent-color, 247, 52, 37), 0.15);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(var(--accent-color, 247, 52, 37), 0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+
+    .hybrid-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-header {
+        padding: 20px;
+
+    }
+
+    .card-details {
+        padding: 20px;
+    }
+
+    .card-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+
+    .card-title h3 {
+        font-size: 1.1rem;
+    }
+
+    .detail-item,
+    .detail-tag {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+    .hybrid-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
 
 /* sheme cooperation =========================================================================/*    */
 
 
 .bg-cooperation-schem {
-    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #0A1636 0%, #07122E 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-cooperation-schem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(230, 37, 51, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .cooperation-scheme__content {
@@ -564,16 +638,22 @@ section h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.cooperation-sheme__title {
+    color: #ffffff;
 }
 
 .cooperation-sheme__title-text {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 22px;
     line-height: 120%;
-    color: #2B2B2B;
     margin-bottom: 48px;
+    color: #ffffff;
 }
 
 .wrapper-scheme__block {
@@ -622,7 +702,7 @@ section h2 {
 .scheme__block-line {
     width: 100px;
     height: 2px;
-    background-color: #10132c;
+    background-color: #E62533;
     max-width: 200px;
     min-width: 100px;
     width: 100%;
@@ -632,9 +712,9 @@ section h2 {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    font-size: 21px;
+    font-size: 18px;
     line-height: 134.9%;
-    color: #2B2B2B;
+    color: #fff;
 }
 
 .scheme__block-step {
@@ -643,7 +723,7 @@ section h2 {
     font-weight: 700;
     font-size: 10px;
     line-height: 120%;
-    color: #2B2B2B;
+    color: #fff;
     opacity: 0.4;
 }
 
@@ -653,9 +733,81 @@ section h2 {
     font-weight: 700;
     font-size: 22px;
     line-height: 25px;
-    color: #2B2B2B;
-    padding-bottom: 100px;
+    color: #fff;
 }
+
+
+
+.circle-icon {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    background: rgba(230, 37, 51, 0.1);
+    border: 2px solid rgba(230, 37, 51, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.cooperation-scheme__block:hover .circle-icon {
+    background: rgba(230, 37, 51, 0.2);
+    border-color: #E62533;
+    transform: scale(1.1);
+}
+
+.circle-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.scheme__block-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #E62533 0%, rgba(230, 37, 51, 0) 100%);
+    flex-grow: 1;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.cooperation-scheme__block:hover .scheme__block-line {
+    opacity: 1;
+}
+
+.guarantee-block {
+    background: rgba(230, 37, 51, 0.1);
+    padding: 30px 35px;
+    border-radius: 0 12px 12px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.guarantee-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(230, 37, 51, 0.3), transparent);
+}
+
+.guarantee-icon {
+    color: #E62533;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 2px;
+}
+
 
 /* connection =============================================================================================================================== */
 
@@ -696,16 +848,17 @@ section h2 {
     flex-direction: column;
     position: relative;
     margin: 0 auto;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
+    padding-top: 150px;
 }
 
 .connection__form-text {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 22px;
     line-height: 120%;
-    color: #fff;
+    color: #B0C4DE;
     margin-bottom: 48px;
 }
 
@@ -713,8 +866,7 @@ section h2 {
     display: flex;
     border-radius: 5px;
     justify-content: center;
-    width: 50%;
-    max-width: 100%;
+    max-width: 600px;
     background: #FFFFFF;
     box-shadow: 0px 20px 100px rgba(17, 28, 49, 0.15);
     border-radius: 5px;
@@ -782,6 +934,7 @@ section h2 {
     font-size: 16px;
     line-height: 16px;
     color: #2B2B2B;
+    text-align: left;
 }
 
 .form__label em {
@@ -836,7 +989,146 @@ section h2 {
     opacity: .9;
     border-radius: 4px;
     padding: 12px 5px 12px 5px;
+    cursor: pointer;
 }
+
+/* чебокс */
+
+.checkbox {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.checkbox__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.checkbox__label {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #2B2B2B;
+    text-align: left;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    min-height: 20px;
+}
+
+.checkbox__label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: #E1E5E5;
+    border: 1px solid rgba(42, 42, 42, 0.2);
+    box-shadow: 0px 7px 15px -4px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    transition: all 0.15s ease;
+    box-sizing: border-box;
+}
+
+.checkbox__label::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid #2B2B2B;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+
+.checkbox__input:checked+.checkbox__label::before {
+    background: #E1E5E5;
+    border-color: rgba(42, 42, 42, 0.4);
+}
+
+.checkbox__input:checked+.checkbox__label::after {
+    opacity: 1;
+}
+
+
+.checkbox._error .checkbox__label {
+    color: #F73425;
+}
+
+.checkbox._error .checkbox__label::before {
+    box-shadow: 0 0 5px #F73425;
+    border-color: #F73425;
+    outline: none;
+    border-radius: 4px;
+}
+
+.checkbox__label:hover::before {
+    border-color: rgba(42, 42, 42, 0.4);
+    background: #f0f2f2;
+}
+
+.checkbox__label a {
+    color: #F73425;
+    text-decoration: none;
+    transition: color 0.15s ease;
+    font-weight: 500;
+}
+
+.checkbox__label a:hover {
+    text-decoration: underline;
+    color: #d62c1f;
+}
+
+.checkbox__label em {
+    color: red;
+    font-style: normal;
+    margin-left: 2px;
+}
+
+.checkbox__input:disabled+.checkbox__label {
+    color: rgba(42, 42, 42, 0.5);
+    cursor: not-allowed;
+}
+
+.checkbox__input:disabled+.checkbox__label::before {
+    background: rgba(225, 229, 229, 0.5);
+    border-color: rgba(42, 42, 42, 0.1);
+}
+
+@media (max-width: 768px) {
+    .checkbox__label {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .checkbox__label::before {
+        width: 16px;
+        height: 16px;
+    }
+
+    .checkbox__label::after {
+        left: 5px;
+        top: 1px;
+        width: 5px;
+        height: 9px;
+    }
+}
+
+
 
 /* contact ============================================================================== */
 #contact {
@@ -849,6 +1141,21 @@ section h2 {
     width: 100%;
     height: 100%;
     align-items: center;
+    font-family: 'Ubuntu';
+}
+
+.contact__container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 15px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    flex-direction: column;
 }
 
 .contact__title {
@@ -871,22 +1178,35 @@ section h2 {
     color: #2B2B2B;
 }
 
+.contact__logo {
+    max-width: 150px;
+    padding: 15px;
+}
+
+.contact__rigth {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact__rigth-text {
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+    flex-direction: column;
+}
+
 .contact__description {
     display: flex;
-    width: 100%;
-
+    justify-content: space-between;
 }
 
 .contact__text {
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 15px;
-    align-items: center;
-    background-color: #F73425;
+    align-items: flex-end;
     padding: 15px;
-
 }
 
 .contact__phone-icon {
@@ -897,6 +1217,7 @@ section h2 {
 .contact__phone-icon a {
     cursor: pointer;
     border: none;
+
 }
 
 .contact__description a:hover {
@@ -928,9 +1249,15 @@ section h2 {
 
 .contact__text p,
 .contact__text a {
-    color: #ffffff;
+    color: #2B2B2B;
     transition: 170ms;
 }
+
+.contact__text a:hover {
+    opacity: 0.8;
+    transition: 170ms;
+}
+
 
 .contact-text__description p {
     font-family: 'Montserrat';
@@ -939,6 +1266,18 @@ section h2 {
     font-size: 26px;
     line-height: 32px;
     text-align: center;
+}
+
+.contact__links {
+    padding: 15px;
+    margin-top: auto;
+}
+
+.contact__links a {
+    color: #2B2B2B;
+    margin-left: auto;
+    font-size: 18px;
+    text-decoration: none;
 }
 
 .footer__author-right {
@@ -953,11 +1292,6 @@ section h2 {
     width: 100%;
 }
 
-.map {
-    width: 50%;
-    height: 400px;
-}
-
 [class*="ground-pane"] {
     filter: brightness(50%);
 }
@@ -966,9 +1300,15 @@ section h2 {
     display: none !important;
 }
 
+.email__link:hover {
+    text-decoration: none;
+}
 
-
-
+.email__link {
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: lowercase;
+}
 
 
 /* partners ============================================================================== */
@@ -983,7 +1323,6 @@ section h2 {
     padding: 0 20px;
 }
 
-
 .section-subtitle {
     font-size: 1.1rem;
     color: #666;
@@ -992,7 +1331,6 @@ section h2 {
     line-height: 1.6;
 }
 
-/* Флекс-сетка */
 .partners-flex-grid {
     display: flex;
     flex-wrap: wrap;
@@ -1000,12 +1338,9 @@ section h2 {
     margin: 0 auto;
 }
 
-/* Стили для каждого логотипа */
 .partner-logo {
     flex: 0 0 calc(25% - 30px);
-    /* 4 колонки на десктопе */
     min-width: 200px;
-    /* Минимальная ширина */
     height: 150px;
     background: white;
     border-radius: 12px;
@@ -1019,7 +1354,6 @@ section h2 {
     overflow: hidden;
 }
 
-/* Эффект блеска при наведении */
 .partner-logo::after {
     content: '';
     position: absolute;
@@ -1038,13 +1372,13 @@ section h2 {
     left: 100%;
 }
 
-/* Эффекты при наведении */
+
 .partner-logo:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
-/* Стили для изображений */
+
 .partner-logo img {
     max-width: 100%;
     max-height: 80px;
@@ -1053,16 +1387,10 @@ section h2 {
     transition: all 0.3s ease;
 }
 
-/* Эффект при наведении на изображение */
+
 .partner-logo:hover img {
     filter: grayscale(0%);
     opacity: 1;
-}
-
-/* Кнопка "Стать партнером" */
-.partner-actions {
-    text-align: center;
-    margin-top: 60px;
 }
 
 .btn-partner {
@@ -1086,18 +1414,16 @@ section h2 {
     background: linear-gradient(135deg, #2980b9, #3498db);
 }
 
-/* Адаптивность */
 @media (max-width: 1200px) {
     .partner-logo {
         flex: 0 0 calc(33.333% - 30px);
-        /* 3 колонки */
+
     }
 }
 
 @media (max-width: 900px) {
     .partner-logo {
         flex: 0 0 calc(50% - 30px);
-        /* 2 колонки */
         min-width: 180px;
         height: 140px;
     }
@@ -1110,7 +1436,6 @@ section h2 {
 @media (max-width: 600px) {
     .partner-logo {
         flex: 0 0 calc(50% - 20px);
-        /* 2 колонки с меньшим gap */
         min-width: 150px;
         height: 120px;
         padding: 20px;
@@ -1136,7 +1461,6 @@ section h2 {
 @media (max-width: 400px) {
     .partner-logo {
         flex: 0 0 100%;
-        /* 1 колонка на очень маленьких экранах */
         max-width: 250px;
         margin: 0 auto;
     }

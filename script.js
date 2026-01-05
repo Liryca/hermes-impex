@@ -192,11 +192,24 @@ async function formSend(e) {
       form.reset();
       form.classList.remove("_sending");
     } else {
-      alert("Ошибка");
+      alert("Ошибка отправки формы");
       form.classList.remove("_sending");
     }
-    // } else {
-    // 	alert('Заполните обязательные поля');
+  } else {
+    const errorFields = document.querySelectorAll("._error");
+    if (errorFields.length > 0) {
+      errorFields[0].scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+
+      const checkbox = document.querySelector('input[name="agreement"]');
+      if (checkbox && !checkbox.checked) {
+        alert("Необходимо дать согласие на обработку персональных данных");
+      } else if (error > 0) {
+        alert("Заполните все обязательные поля");
+      }
+    }
   }
 }
 
@@ -208,13 +221,18 @@ function formValidate() {
     const input = formReq[index];
     formRemoveError(input);
 
-    if (input.classList.contains("_email")) {
+    if (input.type === "checkbox") {
+      if (!input.checked) {
+        formAddError(input);
+        error++;
+      }
+    } else if (input.classList.contains("_email")) {
       if (emailTest(input)) {
         formAddError(input);
         error++;
       }
     } else {
-      if (input.value === "") {
+      if (input.value.trim() === "") {
         formAddError(input);
         error++;
       }
@@ -236,3 +254,38 @@ function formRemoveError(input) {
 function emailTest(input) {
   return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const formInputs = document.querySelectorAll(".form__input, .checkbox__input");
+
+  formInputs.forEach((input) => {
+    // Для текстовых полей
+    if (input.type !== "checkbox") {
+      input.addEventListener("input", function () {
+        if (this.value.trim() !== "" || (this.classList.contains("_email") && !emailTest(this))) {
+          formRemoveError(this);
+        }
+      });
+    } else {
+      input.addEventListener("change", function () {
+        if (this.checked) {
+          formRemoveError(this);
+        }
+      });
+    }
+
+    input.addEventListener("focus", function () {
+      formRemoveError(this);
+    });
+  });
+
+  const submitBtn = document.querySelector(".form__button");
+  if (submitBtn) {
+    submitBtn.addEventListener("click", function (e) {
+      this.style.transform = "scale(0.98)";
+      setTimeout(() => {
+        this.style.transform = "";
+      }, 150);
+    });
+  }
+});
